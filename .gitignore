@@ -1,0 +1,6 @@
+#.gitignore
+psd/
+node_modules/
+*.log
+/.htaccess
+/license.txt
