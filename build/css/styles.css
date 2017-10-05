@@ -172,7 +172,7 @@ h6 {
   font-size: 20.5px;
   color: #81808a;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.81);
-  padding: 10px 0;
+  padding: 10px 2%;
   cursor: pointer;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -210,6 +210,7 @@ h6 {
 @media (max-width: 992px) and (max-width: 580px) {
   .settings-block-value .digits li {
     font-size: 12px;
+    padding: 10px 1%;
   }
 }
 .settings-block-value .digits .li-bg {
@@ -238,6 +239,11 @@ h6 {
   .settings-block-value .digits .li-bg {
     width: 40px;
     height: 40px;
+    top: 0px;
+  }
+}
+@media (max-width: 992px) and (max-width: 767px) and (max-width: 580px) {
+  .settings-block-value .digits .li-bg {
     top: -3px;
   }
 }
@@ -254,9 +260,9 @@ h6 {
     width: 30px;
   }
 }
-@media (max-width: 767px) and (max-width: 767px) {
+@media (max-width: 767px) and (max-width: 580px) {
   .settings-block-value-bet .digits .li-bg {
-    width: 22px;
+    width: 24px;
   }
 }
 @media (max-width: 767px) {

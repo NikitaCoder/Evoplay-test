@@ -51,7 +51,7 @@
           font-size: 20.5px;
           color: #81808a;
           text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.81);
-          padding: 10px 0;
+          padding: 10px 2%;
           cursor: pointer;
           .flex-display(flex);
           .align-items(center);
@@ -80,6 +80,7 @@
             font-size: 16.5px;
             @media (max-width: 580px){
               font-size: 12px;
+              padding: 10px 1%;
             }
           }
         }
@@ -104,7 +105,10 @@
             @media (max-width: 767px){
               width: 40px;
               height: 40px;
-              top: -3px;
+              top: 0px;
+              @media (max-width: 580px){
+                top: -3px;
+              }
             }
           }
         }
@@ -121,8 +125,8 @@
           .li-bg{
             @media (max-width: 767px){
               width: 30px;
-              @media (max-width: 767px){
-                width: 22px;
+              @media (max-width: 580px){
+                width: 24px;
               }
             }
           }
