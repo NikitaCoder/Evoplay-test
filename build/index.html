@@ -11,10 +11,84 @@
   </head>
   <!--body-->
   <body>
+    <!-- mixins-->
     <!-- header-->
-    <header id="header"></header>
+    <header class="header">
+      <ul class="header-menu">
+        <li class="header-menu-li header-menu-back"><a href="#"></a></li>
+        <li class="header-menu-li header-menu-info"><a href="#"></a></li>
+        <li class="header-menu-li header-menu-faq"><a href="#"></a></li>
+        <li class="header-menu-li header-menu-settings active"><a href="#"></a></li>
+      </ul>
+    </header>
     <!-- content-->
-    <main id="settings"></main>
+    <main class="settings">
+      <h1 class="settings-title">Settings</h1>
+      <section class="settings-block">
+        <div class="settings-block-digits">
+          <div class="settings-block-value">
+            <div class="settings-block-value-coin">
+                  <h2 class="settings-blue-title">coin value</h2>
+                  <ul class="digits">
+                    <li>0.01</li>
+                    <li class="checked">0.02</li>
+                    <li>0.05</li>
+                    <li>0.1</li>
+                    <li>0.2</li>
+                    <li>0.5</li>
+                    <li>1</li>
+                    <li>2</li>
+                  </ul>
+            </div>
+            <div class="settings-block-value-bet">
+                  <h2 class="settings-blue-title">Bet</h2>
+                  <ul class="digits">
+                    <li>1</li>
+                    <li class="checked">2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>10</li>
+                    <li>20</li>
+                    <li>30</li>
+                    <li>40</li>
+                    <li>50</li>
+                    <li>100</li>
+                    <li>200</li>
+                  </ul>
+            </div>
+          </div>
+          <div class="settings-block-total">
+            <h2 class="settings-blue-title">total bet</h2>
+            <div class="digit-total">5000</div>
+          </div>
+        </div>
+        <div class="settings-block-sound">
+          <div class="settings-block-sound-wrap sounds">
+                <div class="sound-text">
+                  <h2 class="settings-blue-title">Game sounds</h2><span>Enable/Disable</span>
+                </div>
+                <div class="sound-switch">
+                  <input type="radio" name="sounds" id="sounds_1" checked="checked">
+                  <label for="sounds_1">on</label>
+                  <input type="radio" name="sounds" id="sounds_2">
+                  <label for="sounds_2">off</label>
+                </div>
+          </div>
+          <div class="settings-block-sound-wrap music">
+                <div class="sound-text">
+                  <h2 class="settings-blue-title">Music</h2><span>Enable/Disable</span>
+                </div>
+                <div class="sound-switch">
+                  <input type="radio" name="music" id="music_1" checked="checked">
+                  <label for="music_1">on</label>
+                  <input type="radio" name="music" id="music_2">
+                  <label for="music_2">off</label>
+                </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- scripts-->
     <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="./js/custom.js"></script>

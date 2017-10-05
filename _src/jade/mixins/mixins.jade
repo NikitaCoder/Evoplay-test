@@ -1,0 +1,19 @@
+mixin numbers(title, numbs)
+    h2(class='settings-blue-title')= title
+    ul(class='digits')
+        each arg, index in numbs
+            if index == 1
+                li(class="checked")= arg
+            else
+                li= arg
+
+
+mixin sound(title, name_attr)
+    .sound-text
+        h2(class='settings-blue-title')= title
+        span Enable/Disable
+    .sound-switch
+        input(type="radio", name=name_attr, id=name_attr+'_1', checked="checked")
+        label(for=name_attr+'_1') on
+        input(type="radio", name=name_attr, id=name_attr+'_2')
+        label(for=name_attr+'_2') off

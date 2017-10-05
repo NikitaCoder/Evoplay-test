@@ -1,4 +1,22 @@
 extends ../layouts/base
 
 block page
-    main#settings
+    main.settings
+        h1.settings-title Settings
+        section.settings-block
+            .settings-block-digits
+                .settings-block-value
+                    .settings-block-value-coin
+                        +numbers('coin value', ['0.01', '0.02', '0.05', '0.1', '0.2', '0.5', '1', '2'])
+                    .settings-block-value-bet
+                        +numbers('Bet', ['1', '2', '3', '4', '5', '10', '20', '30', '40', '50', '100', '200']) 
+                .settings-block-total
+                    h2.settings-blue-title total bet
+                    .digit-total 5000
+            .settings-block-sound
+                .settings-block-sound-wrap.sounds
+                    +sound('Game sounds', 'sounds')
+                .settings-block-sound-wrap.music
+                    +sound('Music', 'music')
+                                         
+                        

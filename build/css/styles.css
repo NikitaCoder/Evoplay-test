@@ -1,21 +1,21 @@
 @font-face {
   font-family: 'robotoregular';
   src: url('../fonts/Roboto-Regular-webfont.eot');
-  src: url('../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Regular-webfont.woff2') format('woff2'), url('../fonts/Roboto-Regular-webfont.woff') format('woff'), url('../fonts/Roboto-Regular-webfont.ttf') format('truetype'), url('../fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+  src: url('../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Regular-webfont.woff') format('woff'), url('../fonts/Roboto-Regular-webfont.ttf') format('truetype'), url('../fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'robotobold';
   src: url('../fonts/Roboto-Bold-webfont.eot');
-  src: url('../fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Bold-webfont.woff2') format('woff2'), url('../fonts/Roboto-Bold-webfont.woff') format('woff'), url('../fonts/Roboto-Bold-webfont.ttf') format('truetype'), url('../fonts/Roboto-Bold-webfont.svg#robotobold') format('svg');
+  src: url('../fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Bold-webfont.woff') format('woff'), url('../fonts/Roboto-Bold-webfont.ttf') format('truetype'), url('../fonts/Roboto-Bold-webfont.svg#robotobold') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'robotomedium';
   src: url('../fonts/Roboto-Medium-webfont.eot');
-  src: url('../fonts/Roboto-Medium-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Medium-webfont.woff2') format('woff2'), url('../fonts/Roboto-Medium-webfont.woff') format('woff'), url('../fonts/Roboto-Medium-webfont.ttf') format('truetype'), url('../fonts/Roboto-Medium-webfont.svg#robotomedium') format('svg');
+  src: url('../fonts/Roboto-Medium-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Medium-webfont.woff') format('woff'), url('../fonts/Roboto-Medium-webfont.ttf') format('truetype'), url('../fonts/Roboto-Medium-webfont.svg#robotomedium') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -38,9 +38,13 @@ html {
   height: 100%;
 }
 body {
+  font-family: 'robotomedium', sans-serif;
   min-height: 100%;
   overflow-x: hidden;
   font-weight: normal;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
 }
 input,
 textarea,
@@ -75,4 +79,306 @@ a {
   display: block;
   content: "";
   clear: both;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+.settings {
+  background-color: #1f1e22;
+}
+.settings-title {
+  font-family: 'robotobold';
+  font-size: 31px;
+  color: #81808a;
+  text-align: center;
+  background-color: #121114;
+  padding: 15px 0;
+  text-transform: uppercase;
+  margin: 0;
+}
+.settings-block {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 30px 4% 50px;
+}
+.settings-block-digits {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  padding: 0 0 50px;
+  border-bottom: 2px solid #141316;
+}
+.settings-block-value {
+  width: 75%;
+}
+.settings-block-value .digits {
+  background: #17161a;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 0 3px rgba(0, 0, 0, 0.58);
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-shrink: 1;
+  flex-shrink: 1;
+  -webkit-flex-basis: 0;
+  -ms-flex-basis: 0;
+  flex-basis: 0;
+  -webkit-justify-content: space-around;
+  -ms-justify-content: space-around;
+  justify-content: space-around;
+}
+.settings-block-value .digits li {
+  font-size: 20.5px;
+  color: #81808a;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.81);
+  padding: 12px 0;
+  cursor: pointer;
+}
+.settings-block-value .digits li.checked {
+  font-size: 24px;
+  color: #d8e8f5;
+  text-shadow: 0 -1px 0 rgba(31, 30, 34, 0.38);
+  position: relative;
+  z-index: 0;
+}
+.settings-block-value .digits li.checked:before {
+  content: '';
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  display: block;
+  z-index: -1;
+  left: 50%;
+  top: -12px;
+  border-radius: 10px;
+  transform: translate(-50%, 0);
+  box-shadow: inset 0 1px 0 0.2px #a6e1ff;
+  background-color: #0085eb;
+  background: -moz-linear-gradient(top, #0085eb 0%, #002850 76%, #01274d 100%);
+  background: -webkit-linear-gradient(top, #0085eb 0%, #002850 76%, #01274d 100%);
+  background: linear-gradient(to bottom, #0085eb 0%, #002850 76%, #01274d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#0085eb, endColorstr=#01274d, GradientType=0);
+}
+.settings-block-value-coin {
+  margin-bottom: 35px;
+}
+.settings-block-total {
+  width: 20%;
+}
+.settings-block-total h2 {
+  text-align: center;
+}
+.settings-block-total .digit-total {
+  background: #17161a;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 0 3px rgba(0, 0, 0, 0.58);
+  font-size: 35px;
+  color: #eccd00;
+  text-shadow: 0 -1px 0 rgba(27, 26, 29, 0.38);
+  height: calc(100% - 45px);
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+.settings-block-sound {
+  padding: 30px 0 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+}
+.settings-block-sound h2 {
+  margin: 0 0 13px 0;
+}
+.settings-block-sound span {
+  font-family: 'robotoregular';
+  font-size: 20.5px;
+  color: #81808a;
+  display: inline-block;
+  margin-bottom: 3px;
+}
+.settings-block-sound-wrap {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+}
+.settings-block-sound-wrap .sound-switch {
+  position: relative;
+  z-index: 0;
+  transition: .3s;
+  background: #17161a;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 0 3px rgba(0, 0, 0, 0.58);
+  border-radius: 5px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+.settings-block-sound-wrap .sound-switch input {
+  display: none;
+}
+.settings-block-sound-wrap .sound-switch input:checked + label {
+  color: #c9e1f4;
+}
+.settings-block-sound-wrap .sound-switch input:checked + label:last-child:before {
+  left: 47.5%;
+}
+.settings-block-sound-wrap .sound-switch label {
+  color: #81808a;
+  text-shadow: 0 -1px 0 rgba(0, 21, 42, 0.51);
+  font-size: 31px;
+  padding: 0 23px 0 30px;
+  transition: .3s;
+  cursor: pointer;
+}
+.settings-block-sound-wrap .sound-switch label:last-child {
+  padding: 0 30px 0 23px;
+}
+.settings-block-sound-wrap .sound-switch label:last-child:before {
+  content: '';
+  position: absolute;
+  width: 50%;
+  z-index: -1;
+  height: 90%;
+  left: 2.5%;
+  top: 5%;
+  transition: .3s;
+  border-radius: 5px;
+  background-color: #0291ff;
+  background: -moz-linear-gradient(top, #0291ff 0%, #0291ff 8%, #0075cf 8%, #002850 100%);
+  background: -webkit-linear-gradient(top, #0291ff 0%, #0291ff 8%, #0075cf 8%, #002850 100%);
+  background: linear-gradient(to bottom, #0291ff 0%, #0291ff 8%, #0075cf 8%, #002850 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#0291ff, endColorstr=#002850, GradientType=0);
+}
+.settings-block-sound-wrap .sound-switch label:hover {
+  transition: .3s;
+  color: #c9e1f4;
+}
+.settings-block-sound-wrap .sound-text {
+  margin-right: 25px;
+}
+.settings-blue-title {
+  font-size: 20.5px;
+  color: #4fa6ff;
+  margin: 0 0 25px;
+  text-transform: uppercase;
+}
+.header {
+  background-color: #647786;
+  background: -moz-linear-gradient(top, #647786 0%, #252525 100%);
+  background: -webkit-linear-gradient(top, #647786 0%, #252525 100%);
+  background: linear-gradient(to bottom, #647786 0%, #252525 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#647786, endColorstr=#252525, GradientType=0);
+  box-shadow: inset 0 1px 0 1px #838fbb, 0 2px 0 0 rgba(0, 0, 0, 0.75);
+}
+.header-menu {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.header-menu-li {
+  cursor: pointer;
+  position: relative;
+  width: calc(33.33333333%);
+  height: 80px;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-shrink: 1;
+  flex-shrink: 1;
+  -webkit-flex-basis: 0;
+  -ms-flex-basis: 0;
+  flex-basis: 0;
+}
+.header-menu-li a {
+  background-position: center;
+  background-size: 40px auto;
+  background-repeat: no-repeat;
+  display: block;
+  height: 100%;
+}
+.header-menu-li:after,
+.header-menu-li:first-child:before {
+  content: '';
+  width: 1px;
+  background-color: #111013;
+  border-left: 1px solid rgba(68, 66, 76, 0.6);
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.header-menu-li:first-child:before {
+  right: inherit;
+  left: 0;
+}
+@media (max-width: 1920px) {
+  .header-menu-li:last-child:after,
+  .header-menu-li:first-child:before {
+    display: none;
+  }
+}
+.header-menu-li.active {
+  background-color: #024284;
+  background: -moz-linear-gradient(top, #024284 0%, #0075cf 100%);
+  background: -webkit-linear-gradient(top, #024284 0%, #0075cf 100%);
+  background: linear-gradient(to bottom, #024284 0%, #0075cf 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#024284, endColorstr=#0075cf, GradientType=0);
+  box-shadow: inset 0 9px 0 0 #008fff;
+}
+.header-menu-back {
+  -webkit-flex-grow: 0;
+  -ms-flex-grow: 0;
+  flex-grow: 0;
+  -webkit-flex-basis: 80px;
+  -ms-flex-basis: 80px;
+  flex-basis: 80px;
+}
+.header-menu-back a {
+  background-image: url('../img/back.png');
+}
+.header-menu-info a {
+  background-image: url('../img/info.png');
+}
+.header-menu-faq a {
+  background-image: url('../img/faq.png');
+}
+.header-menu-settings a {
+  background-image: url('../img/settings.png') !important;
 }
